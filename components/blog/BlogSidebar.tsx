@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { categories } from "@/data/categories";
 import { authors } from "@/data/authors";
 import Link from "next/link";
+import Image from "next/image";
 
 export function BlogSidebar() {
   return (
@@ -30,9 +31,11 @@ export function BlogSidebar() {
               href={`/authors/${author.id}`}
               className="flex items-center space-x-3 text-sm"
             >
-              <img
+              <Image
                 src={author.avatar}
                 alt={author.name}
+                width={32}
+                height={32}
                 className="h-8 w-8 rounded-full object-cover"
               />
               <div>

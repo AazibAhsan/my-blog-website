@@ -1,6 +1,7 @@
 import { ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { Post } from "@/types/blog";
+import Image from "next/image";
 
 interface FeaturedPostProps {
   post: Post;
@@ -32,12 +33,14 @@ export function FeaturedPost({ post }: FeaturedPostProps) {
           </Link>
         </div>
         <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="object-cover"
-          />
-        </div>
+      <Image
+        src={post.image}
+        alt={post.title}
+        width={1600} // Adjust the width as needed
+        height={900}  // Adjust the height to maintain the 16:9 aspect ratio
+        className="object-cover"
+      />
+    </div>
       </div>
     </section>
   );

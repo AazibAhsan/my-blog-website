@@ -8,7 +8,9 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-2">
             <BookOpen className="h-6 w-6" />
+            <Link href="/" className="text-xl font-bold hover:text-foreground">
             <span className="text-xl font-bold">DevBlog</span>
+            </Link>
           </div>
           <div className="flex space-x-6 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground">
@@ -21,11 +23,14 @@ export function Footer() {
               RSS Feed
             </Link>
           </div>
+          <Link href="/" className="text-sm font-medium text-primary hover:underline">
           <div className="text-sm text-muted-foreground">
             © 2024 DevBlog. All rights reserved.
           </div>
+          </Link>
         </div>
       </div>
     </footer>
+    
   );
 }

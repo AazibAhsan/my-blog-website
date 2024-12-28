@@ -25,7 +25,7 @@ export function AboutContent() {
 
       <h2>Join Our Community</h2>
       <p>
-        DevBlog is more than just a blog - it's a community of developers sharing
+        DevBlog is more than just a blog - it&apos;s a community of developers sharing
         knowledge and experiences. Join us in our journey to make web development
         more accessible and enjoyable for everyone.
       </p>

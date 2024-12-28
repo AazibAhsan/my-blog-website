@@ -10,6 +10,14 @@ interface BlogPostPageProps {
   };
 }
 
+// Define the possible slugs for static export
+export async function generateStaticParams() {
+  // Generate slugs based on the `recentPosts` array
+  return recentPosts.map((_, index) => ({
+    slug: (index + 1).toString(), // Convert index to string (e.g., "1", "2", etc.)
+  }));
+}
+
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   const post = recentPosts[parseInt(params.slug) - 1];
 
